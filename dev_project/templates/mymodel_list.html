@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyModel List</title>
+</head>
+<body>
+    <h1>MyModel List</h1>
+    <ul>
+        {% for mymodel in mymodels %}
+        <li><a href="{% url 'mymodel_detail' mymodel.pk %}">{{ mymodel.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'mymodel_create' %}">Create new MyModel</a>
+</body>
+</html>
